@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 enum Operands {
     ADD = '+',
     SUB = '-',
@@ -9,7 +8,7 @@ enum Operands {
 type Callback = {(err: Error, result?: undefined): Error, (err: null, result: number): number};
 function callback(err: Error, result?: undefined): Error;
 function callback(err: null, result: number): number;
-function callback(err: Error | null, result: any): Error | number {
+function callback(err: Error | null, result: any) : Error | number {
     if (err) {
         console.log(err.message);
         return err;
@@ -33,4 +32,4 @@ function superComputer(firstNumber: number, operand: string, sndNumber: number, 
     }
 }
 
-console.log(superComputer(1, '+', 2, callback));
+superComputer(1, '+', 2, callback);

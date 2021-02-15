@@ -18,6 +18,17 @@ module.exports = {
         'no-console': 'off',
         'no-shadow': 'off',
         'no-redeclare': 'off',
+        'no-unused-vars': 'off',
+        'import/extensions': 'off',
+        'max-len': ['error', { code: 200 }],
         indent: ['error', 4],
+    },
+    settings: {
+        'import/resolver': {
+            node: {
+                paths: ['src'],
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            },
+        },
     },
 };

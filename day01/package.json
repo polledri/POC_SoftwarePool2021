@@ -18,7 +18,7 @@
   "scripts": {
     "lint": "eslint src/**/*",
     "lint:format": "eslint --fix src/**/*",
-    "start": "ts-node src/superComputer.ts",
+    "start": "ts-node src/createCosmonaut.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
