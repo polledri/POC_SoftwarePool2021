@@ -5,30 +5,30 @@ enum Operands {
     MUL = '*',
 }
 
-type Callback = {(err: Error, result?: undefined): Error, (err: null, result: number): number};
-function callback(err: Error, result?: undefined): Error;
-function callback(err: null, result: number): number;
-function callback(err: Error | null, result: any) : Error | number {
+export type Callback = {(err: Error, result?: undefined): Error, (err: null, result: number): number};
+export function callback(err: Error, result?: undefined): Error;
+export function callback(err: null, result: number): number;
+export function callback(err: Error | null, result: any) : Error | number {
     if (err) {
         console.log(err.message);
         return err;
     }
-    console.log(`Result: ${result}`);
+    console.log(result);
     return result;
 }
 
-function superComputer(firstNumber: number, operand: string, sndNumber: number, callb: Callback) {
+export function superComputer(firstNumber: number, operand: string, sndNumber: number, callb: Callback) : Error | number  {
     let nb: number = 0;
     try {
-        if (sndNumber === 0 && operand === Operands.DIV) throw new Error('Divison by 0');
+        if (sndNumber === 0 && operand === Operands.DIV) throw new Error('Division by 0');
         else if (operand === Operands.ADD) nb = firstNumber + sndNumber;
         else if (operand === Operands.SUB) nb = firstNumber - sndNumber;
         else if (operand === Operands.DIV) nb = firstNumber / sndNumber;
         else if (operand === Operands.MUL) nb = firstNumber * sndNumber;
         else throw new Error('Bad operator');
-        callb(null, nb);
+        return callb(null, nb);
     } catch (e) {
-        callb(e, undefined);
+        return callb(e, undefined);
     }
 }
 
