@@ -21,6 +21,7 @@ module.exports = {
         'no-unused-vars': 'off',
         'import/extensions': 'off',
         'import/prefer-default-export': 'off',
+        'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
         'max-len': ['error', { code: 200 }],
         indent: ['error', 4],

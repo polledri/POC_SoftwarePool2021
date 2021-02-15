@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
   "devDependencies": {
     "@jest/globals": "^26.6.2",
     "@types/jest": "^26.0.20",
@@ -22,7 +24,7 @@
   "scripts": {
     "lint": "eslint src/**/*",
     "lint:format": "eslint --fix src/**/*",
-    "start": "ts-node src/getCosmonaut.ts",
+    "start": "ts-node src/selectCosmonaut.ts",
     "test": "jest tests --env=node",
     "test:cov": "jest --coverage tests --env=node",
     "test:watch": "jest --watchAll tests --env=node"
