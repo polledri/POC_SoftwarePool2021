@@ -22,7 +22,7 @@
   "scripts": {
     "lint": "eslint src/**/*",
     "lint:format": "eslint --fix src/**/*",
-    "start": "ts-node src/createCosmonaut.ts",
+    "start": "ts-node src/getCosmonaut.ts",
     "test": "jest tests --env=node",
     "test:cov": "jest --coverage tests --env=node",
     "test:watch": "jest --watchAll tests --env=node"

@@ -7,7 +7,7 @@ describe('Test createCosmonaut', () => {
         const name: string = 'Cheepsz';
         const mission: Mission = Mission.MOON;
         const country: Country = Country.FR;
-        const cosmo: Cosmonaut = {name, mission, country};
+        const cosmo: Cosmonaut = { name, mission, country };
         expect(createCosmonaut('Cheepsz', Mission.MOON, Country.FR)).toStrictEqual(cosmo);
     });
 });
