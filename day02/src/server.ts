@@ -25,7 +25,9 @@ app.get('/repeat-my-query', (req, res) => {
     return req.query.message;
 })
 app.get('/repeat-my-param/:message', (req, res) => {
-    res.send('Response send to client: '+req.params.message);
+    const param = req.params.message
+    res.send('Response send to client: '+param);
+    return param;
 })
 app.post('/repeat-my-body',  (req, res) => {
     if (req.body === undefined) {
