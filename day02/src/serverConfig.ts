@@ -1,12 +1,5 @@
 import { get } from 'env-var'
 
-// export interface ProcessEnv {
-//     [key: string]: string | undefined
-// }
-
-// export const hello = process.env["HELLO_MESSAGE"];
-// export const port = process.env["SERVER_PORT"];
-
 const env = (name: string, required = true) => get(name).required(required);
 
 export const PORT = env('SERVER_PORT', false).default(8000).asPortNumber();
